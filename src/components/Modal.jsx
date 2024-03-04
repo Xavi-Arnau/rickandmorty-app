@@ -15,7 +15,7 @@ const Modal = ({ id, onClose }) => {
     };
 
     fetchData();
-  }, []);
+  }, [id]);
   const modalRef = useRef();
   const closeModal = (e) => {
     if (modalRef.current === e.target) {
