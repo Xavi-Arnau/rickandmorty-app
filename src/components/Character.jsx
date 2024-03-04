@@ -20,7 +20,7 @@ const Character = ({ id, status, image, name, gender, created, onClick }) => {
   };
   return (
     <div
-      className="cursor-pointer hover:scale-105 rounded flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/5 border-2 border-fluorGreen mb-6"
+      className="cursor-pointer hover:scale-105 rounded flex flex-col items-center p-4  rounded-lg bg-veryLightGray md:w-1/6 border-2 border-fluorGreen mb-6"
       onClick={() => onClick(id)}
     >
       <img src={image} alt={name} />

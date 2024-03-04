@@ -38,11 +38,11 @@ const Modal = ({ id, onClose }) => {
       onClick={closeModal}
       className="fixed inset-0 bg-black bg-opacity-70 backgrop-blur-sm flex justify-center"
     >
-      <div className="mt-20 flex flex-col gap-5 text-white w-2/5 bg-slate-800 px-10 py-4 h-2/5 rounded-2xl">
+      <div className="h-3/4 items-center mt-20 flex flex-col gap-5 text-white bg-slate-800 px-10 py-4 rounded-2xl md:h-2/5 md:w-1/3">
         <button onClick={onClose} className="place-self-end">
           <X size={30} />
         </button>
-        <div className="flex gap-6">
+        <div className="flex flex-col gap-6 md:flex-row justify-center">
           <div>
             <img
               src={character.image}
