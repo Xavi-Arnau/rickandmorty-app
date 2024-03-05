@@ -36,7 +36,7 @@ function App() {
       {characters ? (
         <CharList characters={characters} onClick={showDetail} />
       ) : (
-        ""
+        <h2 className="text-2xl font-bold text-center">No Results</h2>
       )}
 
       {showModal && <Modal id={detail} onClose={() => setShowModal(false)} />}

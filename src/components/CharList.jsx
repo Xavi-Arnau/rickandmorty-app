@@ -5,7 +5,6 @@ const CharList = ({ characters, onClick }) => {
   return (
     <section id="characters">
       <div className="max-w-6xl px-5 mx-auto mt-10 text-center">
-        <h2 className="text-2xl font-bold text-center">Results</h2>
         <div className="flex flex-col mt-24 md:flex-row  justify-between flex-wrap gap-x-px">
           {characters.map((character) => (
             <Character

@@ -1,6 +1,7 @@
 import React from "react";
 import { X } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
+import { formatDate } from "../helper";
 
 const Modal = ({ id, onClose }) => {
   const [character, setCharacter] = useState(false);
@@ -22,27 +23,18 @@ const Modal = ({ id, onClose }) => {
       onClose();
     }
   };
-  const formatDate = (date) => {
-    let day = date.getDate();
-    let month = date.getMonth();
-    let year = date.getFullYear();
 
-    if (day < 10) day = "0" + day;
-    if (month < 10) month = "0" + month;
-
-    return `${day}/${month}/${year}`;
-  };
   return (
     <div
       ref={modalRef}
       onClick={closeModal}
       className="fixed inset-0 bg-black bg-opacity-70 backgrop-blur-sm flex justify-center"
     >
-      <div className="h-3/4 items-center mt-20 flex flex-col gap-5 text-white bg-slate-800 px-10 py-4 rounded-2xl md:h-2/5 md:w-1/3">
+      <div className="h-3/4 items-center mt-20 flex flex-col gap-5 text-white bg-zinc-900 px-10 py-4 rounded-2xl md:h-2/5 md:w-1/3">
         <button onClick={onClose} className="place-self-end">
           <X size={30} />
         </button>
-        <div className="flex flex-col gap-6 md:flex-row justify-center">
+        <div className="flex flex-col gap-10 md:flex-row justify-center">
           <div>
             <img
               src={character.image}
